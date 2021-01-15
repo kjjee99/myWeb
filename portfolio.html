@@ -1,0 +1,137 @@
+<!-- cf :: https://www.w3schools.com/w3css/tryit.asp?filename=tryweb_architect_full -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="portfolio.css" rel="stylesheet">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+    <!-- Navigator Bar -->
+    <div class="top-menu">
+        <a href="#home" class="item-button"><b>PORTFOLIO</b></a>
+        <div id="sidemenu" class="sideMenu">
+            <a href="#web" class="item-button">Web</a>
+            <a href="#java" class="item-button">Java</a>
+            <a href="#python" class="item-button">Python</a>
+            <a href="#c" class="item-button">C/C++</a>
+        </div>
+    </div>
+
+    <!-- Page Start -->
+    <div id="home" class="content">
+        <!-- Image -->
+        <div class="image-container">
+            <div class="display-center">
+                <h1 class="text1">
+                    <span class="padding-text" style="color:rgb(17, 170, 99)"><b>Dream</b></span>
+                    <span class="small-text">Project</span>
+                </h1>
+            </div>
+            <section class="slideImageSection">
+            <img class="slideImage" src="img/dream_header_weyoung.jpg" width="100%" onclick="carousel()">
+            <img class="slideImage" src="img/nctdream_photobook.jpeg" width="100%" onclick="carousel()">
+            <img class="slideImage" src="img/nctdream_header.jpg" width="100%" onclick="carousel()">
+            </section>
+        </div>
+        <!-- WEB -->
+        <div id="web" class="container-web">
+            <h2 class="text-web">&#10077; Web &#10078;</h2>
+            <div class="container-web-content">
+                <div class="webLink"><a href="todo.html">&#10003; Todo List</a> ::clone</div>
+                <iframe src="todo.html" frameborder="0" style="width: 97%; height: 200px; margin-top: 10px;" ></iframe>
+                <div class="webLink"><a href="zero_Main.html">&#9850; Zero-Waste</a></div>
+                <iframe src="zero_Main.html" style="width: 97%; height: 200px; margin-top: 10px; border: 1px solid black;" ></iframe>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+                <p>Dream</p>
+            </div>
+        </div>
+        <!-- Java -->
+        <div id="java" class="container-java">
+            <h2 class="text-java">&#10077;Java&#10078;</h2>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+        </div>
+        <!-- Python -->
+        <div id="python" class="container-python">
+            <h2 class="text-python">&#10077;Python&#10078;</h2>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+        </div>
+        <!-- c -->
+        <div id="c" class="container-c">
+            <h2 class="text-c">&#10077;C/C++&#10078;</h2>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+            <p>Dream</p>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-bottom"><i>creator :: 0000@gmail.com</i></footer>
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function menuOpen(){
+            document.getElementById("sidemenu").style.display = "block";
+        }
+        function menuClose(){
+            document.getElementById("sidemenu").style.display = "none";
+        }
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slideImage");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
